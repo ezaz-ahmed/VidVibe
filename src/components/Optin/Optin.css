@@ -1,0 +1,104 @@
+.optin {
+  margin-top: 8%;
+}
+
+.optin p {
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.btn-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 10px auto 35px;
+}
+
+.btn {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0px 25px 15px;
+  min-width: 150px;
+}
+
+.btn span {
+  position: relative;
+  /* display: inline-block; */
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 40px;
+  transition: 0.3s;
+}
+
+/* 10. hover-opacity */
+.btn.hover-opacity::before {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.btn.hover-opacity:hover::before {
+  opacity: 1;
+}
+
+/*--- btn-3 ---*/
+.btn-3 {
+  padding: 20px;
+}
+
+.btn-3 span {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-3::before,
+.btn-3::after {
+  background: transparent;
+  z-index: 2;
+}
+
+/* 14. hover-border-4 */
+.btn.hover-border-4::before,
+.btn.hover-border-4::after {
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  transition: width 0.2s linear, height 0.15s 0.2s ease-out, opacity 0s 0.35s;
+}
+
+.btn.hover-border-4::before {
+  bottom: 0;
+  left: -1px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn.hover-border-4::after {
+  top: 0;
+  right: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn.hover-border-4:hover::before,
+.btn.hover-border-4:hover::after {
+  width: 100%;
+  height: 99%;
+  opacity: 1;
+  transition: width 0.2s 0.15s ease-out, height 0.15s ease-in, opacity 0s;
+}
